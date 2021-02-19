@@ -1,6 +1,6 @@
-
 package webService;
 
+import DAO.UsuarioDAO;
 import java.util.List;
 import javax.jws.WebService;
 import javax.jws.WebMethod;
@@ -17,9 +17,12 @@ public class WebServiceUSuario {
     /**
      * Web service operation
      */
+    UsuarioDAO dao = new UsuarioDAO();
+
     @WebMethod(operationName = "listar")
     public List<Usuario> listar() {
-        //TODO write your implementation code here:
-        return null;
+        List datos = dao.listar();
+
+        return datos;
     }
 }
