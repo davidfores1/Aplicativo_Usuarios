@@ -19,6 +19,7 @@ public class UsuarioDAO implements UsuarioCrud {
     PreparedStatement ps;
     ResultSet rs;
     Connection con;
+    
     Conexion conex = new Conexion();
 
     @Override
